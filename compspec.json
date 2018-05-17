@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "name": "differentially-private decentralized PCA demo",
+    "id": "dpdpca_test",
+    "version": "v1.0.0",
+    "repository": "",
+    "description": "a test for differentially-private decentralized PCA"
+  },
+  "computation": {
+    "type": "docker",
+    "dockerImage": "dpdpca_test",
+    "command": [
+      "python",
+      "\/computation\/local.py"
+    ],
+    "remote": {
+      "type": "docker",
+      "dockerImage": "dpdpca_test",
+      "command": [
+        "python",
+        "\/computation\/remote.py"
+      ]
+    },
+    "input": {
+      "samples": {
+        "type": "array"
+      }
+    },
+    "output": {
+      "en": {
+        "type": "number"
+      }
+    }
+  }
+}
